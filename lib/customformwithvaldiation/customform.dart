@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:library_flutter_smart_text_input/smarttextinput/smart_text_input.dart';
 
-class Customform extends StatefulWidget {
+class Customformwithvalidation extends StatefulWidget {
   final String pageTitle;
   final String subTitle;
   final TextEditingController fullNametxtCtrl;
@@ -12,7 +12,7 @@ class Customform extends StatefulWidget {
 
 
 
-  const Customform({
+  const Customformwithvalidation({
     super.key,
     required this.pageTitle,
     this.subTitle = "",
@@ -24,10 +24,10 @@ class Customform extends StatefulWidget {
   });
 
   @override
-  State<Customform> createState() => _CustomformState();
+  State<Customformwithvalidation> createState() => _CustomformwithvalidationState();
 }
 
-class _CustomformState extends State<Customform> {
+class _CustomformwithvalidationState extends State<Customformwithvalidation> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
