@@ -1,10 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:library_flutter_smart_text_input/smarttextinput/smart_text_input.dart';
 
 class Customform extends StatefulWidget {
   final String pageTitle;
   final String subTitle;
+  final TextEditingController fullNametxtCtrl;
+  final TextEditingController emailtxtCtrl;
+  final TextEditingController phoneNumberCtrl;
+  final TextEditingController passwordCtrl;
+  final TextEditingController cnfPasswordCtrl;
 
-  const Customform({super.key, required this.pageTitle, this.subTitle=""});
+
+
+  const Customform({
+    super.key,
+    required this.pageTitle,
+    this.subTitle = "",
+    required this.fullNametxtCtrl,
+    required this.emailtxtCtrl,
+    required this.phoneNumberCtrl,
+    required this.passwordCtrl,
+    required this.cnfPasswordCtrl,
+  });
 
   @override
   State<Customform> createState() => _CustomformState();
@@ -16,10 +33,21 @@ class _CustomformState extends State<Customform> {
     return SafeArea(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(widget.pageTitle),
           Text(widget.subTitle),
+          Text("Full Name"),
+          SmartTextInput(txtCtrl: widget.fullNametxtCtrl),
+          Text("Email Address"),
+          SmartTextInput(txtCtrl: widget.fullNametxtCtrl,isGmail: true,),
+          Text("Phone Number"),
+          SmartTextInput(txtCtrl: widget.phoneNumberCtrl,isMobNumber: true),
+          Text("Password"),
+          SmartTextInput(txtCtrl: widget.passwordCtrl,isPassword: true,),
+          Text("Confirm Password"),
+          SmartTextInput(txtCtrl: widget.cnfPasswordCtrl,isPassword: true,),
+
         ],
       ),
     );

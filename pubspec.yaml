@@ -10,6 +10,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  library_flutter_smart_text_input:
+    git:
+      url: https://github.com/AkshaySarkale/smart-text-input.git
+  library_flutter_custombottomsheet:
+    git:
+      url: https://github.com/Excelsior-Technologies-Community/library_flutter_custombotttomsheet.git
+
 
 dev_dependencies:
   flutter_test:
