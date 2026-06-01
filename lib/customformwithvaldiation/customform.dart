@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 class Customform extends StatefulWidget {
-  const Customform({super.key});
+  final String  pageTitle;
+  final String? subTitle;
+  const Customform({super.key,
+    required this.pageTitle,
+    this.subTitle});
 
   @override
   State<Customform> createState() => _CustomformState();
@@ -9,6 +13,12 @@ class Customform extends StatefulWidget {
 class _CustomformState extends State<Customform> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text("${widget.pageTitle}"),
+      ],
+    ));
   }
 }
