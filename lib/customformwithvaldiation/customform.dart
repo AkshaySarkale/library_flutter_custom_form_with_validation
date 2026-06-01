@@ -17,8 +17,9 @@ class _CustomformState extends State<Customform> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text("${widget.pageTitle}"),
+        Text(widget.pageTitle),
       ],
-    ));
+    )
+    );
   }
 }
